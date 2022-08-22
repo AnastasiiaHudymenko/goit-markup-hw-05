@@ -67,7 +67,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-btn" type="button">Замовити послугу</button>
+          <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <!-- Features -->
@@ -134,6 +134,7 @@
                 width="370"
                 height="294"
               />
+              <p class="projects-list-text">Десктопні додатки</p>
             </li>
             <li class="projects-item">
               <img
@@ -142,6 +143,7 @@
                 width="370"
                 height="294"
               />
+              <p class="projects-list-text">Мобільні додатки</p>
             </li>
             <li class="projects-item">
               <img
@@ -150,6 +152,7 @@
                 width="370"
                 height="294"
               />
+              <p class="projects-list-text">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -385,7 +388,7 @@
             <ul class="list footer-list">
               <li class="footer-item">
                 <a
-                  class="link footer-link"
+                  class="link footer-link footer-address-link"
                   href="https://goo.gl/maps/osZWfCpVYim8cWyT9"
                   rel="noopener noreferrer nofollow"
                   target="_blank"
@@ -393,10 +396,10 @@
                 >
               </li>
               <li class="footer-item">
-                <a class="link footer-contacts" href="mailto:info@example.com">info@example.com</a>
+                <a class="link footer-link" href="mailto:info@example.com">info@example.com</a>
               </li>
               <li class="footer-item">
-                <a class="link footer-contacts" href="tel:+380991111111">+38 099 111 11 11</a>
+                <a class="link footer-link" href="tel:+380991111111">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
@@ -436,5 +439,17 @@
         </div>
       </div>
     </footer>
+
+    <!-- BACKDROP-MODAL -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg widtn="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-form-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
