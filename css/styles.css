@@ -305,8 +305,11 @@ img {
 }
 
 .projects-item {
-  position: relative;
   flex-basis: calc((100% - 60px) / 3);
+}
+
+.thumb-projects {
+  position: relative;
 }
 
 .projects-list-text {
@@ -379,9 +382,14 @@ img {
   border-radius: 50%;
   fill: #afb1b8;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* Якщо в цьому послині прибрати transition fill то тоді плавний 
+перехід на колір іконки не відбуваєтся  background-color 
+проходить плавно в от fill обрізаєтся . То скажіть
+то я не правильно зрозуміла вас чи він має бути в іншому місці
+*/
 .team-link-icon:hover,
 .team-link-icon:focus {
   fill: #fff;
@@ -530,7 +538,8 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -658,6 +667,7 @@ img {
 
 .portfolio-list-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-link:hover,
